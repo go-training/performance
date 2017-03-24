@@ -45,3 +45,23 @@ real    0m0.636s
 user    0m0.580s
 sys     0m0.040s
 ```
+
+## Bubble Sort
+
+See the [bubble source code](./bubble)
+
+```
+$ time node bubble/main.js && time go run bubble/main.go && time python2.7 bubble/main.py
+
+real    0m2.133s
+user    0m2.061s
+sys     0m0.022s
+
+real    0m1.513s
+user    0m1.163s
+sys     0m0.186s
+
+real    0m14.118s
+user    0m13.765s
+sys     0m0.203s
+```
