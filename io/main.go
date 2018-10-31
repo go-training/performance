@@ -1,16 +1,18 @@
 package main
 
 import (
-	"io"
+	"bufio"
 	"os"
 	"strconv"
 )
 
 func main() {
 	file, _ := os.Create("go")
+	defer file.Close()
+	writer := bufio.NewWriter(file)
+	defer writer.Flush()
 	for c := 0; c < 1000000; c++ {
 		num := strconv.Itoa(c)
-		io.WriteString(file, num)
+		writer.WriteString(num)
 	}
-	file.Close()
 }
